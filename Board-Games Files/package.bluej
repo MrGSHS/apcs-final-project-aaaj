@@ -27,8 +27,13 @@ objectbench.height=76
 objectbench.width=668
 package.editor.height=400
 package.editor.width=560
+<<<<<<< HEAD
 package.editor.x=945
 package.editor.y=139
+=======
+package.editor.x=1121
+package.editor.y=226
+>>>>>>> 0458a9d596a5dd0c6b23b2991a80856178b09ee5
 package.numDependencies=8
 package.numTargets=20
 package.showExtends=true
@@ -105,10 +110,13 @@ target14.typeParameters=
 target14.width=80
 target14.x=340
 target14.y=150
+<<<<<<< HEAD
 target15.editor.height=700
 target15.editor.width=900
 target15.editor.x=20
 target15.editor.y=257
+=======
+>>>>>>> 0458a9d596a5dd0c6b23b2991a80856178b09ee5
 target15.height=50
 target15.name=FiveInARow
 target15.showInterface=false
@@ -155,8 +163,18 @@ target18.typeParameters=
 target18.width=80
 target18.x=340
 target18.y=260
+<<<<<<< HEAD
 target19.height=50
 target19.name=ConnectFourBoard
+=======
+target19.editor.height=700
+target19.editor.width=900
+target19.editor.x=1020
+target19.editor.y=246
+target19.height=50
+target19.name=ConnectFourBoard
+target19.naviview.expanded=true
+>>>>>>> 0458a9d596a5dd0c6b23b2991a80856178b09ee5
 target19.showInterface=false
 target19.type=ClassTarget
 target19.typeParameters=
@@ -236,8 +254,13 @@ target6.x=280
 target6.y=10
 target7.editor.height=700
 target7.editor.width=900
+<<<<<<< HEAD
 target7.editor.x=1078
 target7.editor.y=199
+=======
+target7.editor.x=0
+target7.editor.y=23
+>>>>>>> 0458a9d596a5dd0c6b23b2991a80856178b09ee5
 target7.height=50
 target7.name=BlankInARow
 target7.naviview.expanded=true
