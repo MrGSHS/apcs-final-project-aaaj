@@ -12,7 +12,7 @@ public class TicTacToeRunner
     {
         String str;
         int row=0, col=0, indexOfComma;
-        System.out.println("Enter the coordinates of the square in the format #,# seperated by a comma with no space");
+        System.out.println("Enter the coordinates of the square in the format #,# seperated by a comma with no space, i.e 2,2 for the middle.");
         Scanner sc = new Scanner(System.in);
         TicTacToeBoard hi = new TicTacToeBoard();
         
@@ -21,15 +21,15 @@ public class TicTacToeRunner
             System.out.print("Player " + hi.getPlayer() + ", please make a move: ");
             str = sc.nextLine();
             indexOfComma=str.indexOf(",");
-            while(indexOfComma==-1 || (Integer.parseInt(str.substring(0,indexOfComma))>2 || Integer.parseInt(str.substring(0,indexOfComma))<0)
-            || (Integer.parseInt(str.substring(indexOfComma+1))>2 || Integer.parseInt(str.substring(indexOfComma+1))<0))
+            while(indexOfComma==-1 || (Integer.parseInt(str.substring(0,indexOfComma))>3 || Integer.parseInt(str.substring(0,indexOfComma))<1)
+            || (Integer.parseInt(str.substring(indexOfComma+1))>3 || Integer.parseInt(str.substring(indexOfComma+1))<1))
             {
                 System.out.print("Invalid move. Player " + hi.getPlayer() + ", please make a legal move: ");
                 str=sc.nextLine();
                 indexOfComma=str.indexOf(",");
             }
-            row=Integer.parseInt(str.substring(0,indexOfComma));
-            col=Integer.parseInt(str.substring(indexOfComma+1));
+            row=Integer.parseInt(str.substring(0,indexOfComma))-1;
+            col=Integer.parseInt(str.substring(indexOfComma+1))-1;
             hi.play(row,col);
             
         }
