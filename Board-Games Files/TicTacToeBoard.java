@@ -25,7 +25,6 @@ public class TicTacToeBoard implements BlankInARow
                 tictactoe[row][col] = 0;
             }
         }
-
     }
 
     public int[][] getBoard()
@@ -63,9 +62,25 @@ public class TicTacToeBoard implements BlankInARow
         }
         boardVal = gameOver();
         return playNumber;
-        
     }
-
+    
+    public int play(int row, int col, int input)
+    {
+        availableMoves = availableMoves();
+        if(availableMoves[row][col]==false)
+        {
+            return -1;
+        }
+        else
+        {
+            if(input == 1 || input == 2){
+                tictactoe[row][col] = input;
+            }
+        }
+        boardVal = gameOver();
+        return -1000;
+    }
+    
     public boolean[][] availableMoves()
     {
         for(int row=0; row<availableMoves.length; row++)
