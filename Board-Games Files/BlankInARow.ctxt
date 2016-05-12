@@ -8,4 +8,6 @@ comment2.params=
 comment2.target=int\ getPlayer()
 comment3.params=row\ col
 comment3.target=int\ play(int,\ int)
-numComments=4
+comment4.params=col
+comment4.target=int\ play(int)
+numComments=5

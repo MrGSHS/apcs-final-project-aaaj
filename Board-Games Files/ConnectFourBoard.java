@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ConnectFourBoard implements Board
+public class ConnectFourBoard implements BlankInARow
 {
     private int [][] connectfour;
     private boolean [][] availableMoves;
@@ -23,9 +23,10 @@ public class ConnectFourBoard implements Board
     {
         return playerCount%2+1;
     }
+       
     
     
-    public int play(int col)
+    public int play(int row, int col)
     {
         int playNumber = playerCount%2 + 1;
         availableMoves = availableMoves();

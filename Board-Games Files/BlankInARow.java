@@ -18,4 +18,5 @@ public interface BlankInARow
     int getPlayer();
     int play(int row, int col);
     
+    
 }
