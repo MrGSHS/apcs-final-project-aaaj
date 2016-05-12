@@ -135,6 +135,18 @@ public class FiveInARow implements BlankInARow
             }
         }
         
+        for (int[] row : fiveInARow)
+        {
+            for (int col = 0; col < fiveInARow[0].length; col++)
+            {
+                if (row[col] == 0)
+                {
+                    return -1;
+                }
+               
+            }
+        }
+        
         // if there is a tie
         return 0;
         
