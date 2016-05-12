@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class FiveInARow here.
  * 
@@ -76,7 +75,69 @@ public class FiveInARow implements BlankInARow
     
     public int gameOver()
     {
-        return 1;
+        // checking for a win horizontally
+        for (int row = 0; row < fiveInARow.length; row++)
+        {
+            for(int col = 0; col < fiveInARow[0].length - 4; col++)
+            {
+                if(fiveInARow[row][col] != 0 && fiveInARow[row][col] == fiveInARow[row][col+1]
+                && fiveInARow[row][col] == fiveInARow[row][col+2] && 
+                fiveInARow[row][col] == fiveInARow[row][col+3] && 
+                fiveInARow[row][col] == fiveInARow[row][col+4])
+                {
+                    return fiveInARow[row][col];
+                }
+            }
+        }
+        
+        // checking for a win vertically
+        for (int row = 0; row < fiveInARow.length-4; row++)
+        {
+            for(int col = 0; col < fiveInARow[0].length; col++)
+            {
+                if(fiveInARow[row][col] != 0 && fiveInARow[row][col] == fiveInARow[row+1][col]
+                && fiveInARow[row][col] == fiveInARow[row+2][col] && 
+                fiveInARow[row][col] == fiveInARow[row+3][col] && 
+                fiveInARow[row][col] == fiveInARow[row+4][col])
+                {
+                    return fiveInARow[row][col];
+                }
+            }
+        }
+        
+        // checking for a win diagonally down to the right
+        for (int row = 0; row < fiveInARow.length-4; row++)
+        {
+            for(int col = 0; col < fiveInARow[0].length-4; col++)
+            {
+                if(fiveInARow[row][col] != 0 && fiveInARow[row][col] == fiveInARow[row+1][col+1]
+                && fiveInARow[row][col] == fiveInARow[row+2][col+2] && 
+                fiveInARow[row][col] == fiveInARow[row+3][col+3] && 
+                fiveInARow[row][col] == fiveInARow[row+4][col+4])
+                {
+                    return fiveInARow[row][col];
+                }
+            }
+        }
+        
+        // checking for a win diagonally down to the left
+        for (int row = 0; row < fiveInARow.length-4; row++)
+        {
+            for(int col = 4; col < fiveInARow[0].length; col++)
+            {
+                if(fiveInARow[row][col] != 0 && fiveInARow[row][col] == fiveInARow[row+1][col-1]
+                && fiveInARow[row][col] == fiveInARow[row+2][col-2] && 
+                fiveInARow[row][col] == fiveInARow[row+3][col-3] && 
+                fiveInARow[row][col] == fiveInARow[row+4][col-4])
+                {
+                    return fiveInARow[row][col];
+                }
+            }
+        }
+        
+        // if there is a tie
+        return 0;
+        
     }
-    
+     
 }
