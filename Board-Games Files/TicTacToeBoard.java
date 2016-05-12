@@ -10,12 +10,14 @@ public class TicTacToeBoard implements BlankInARow
     private int[][] tictactoe;
     private boolean[][] availableMoves;
     private static int playerCount;
+    private int boardVal;
 
     public TicTacToeBoard()
     {
         tictactoe = new int[3][3];
         availableMoves = new boolean [3][3];
         playerCount = 0;
+        boardVal = -1;
         for (int row = 0; row < tictactoe.length; row++)
         {
             for (int col = 0; col < tictactoe[0].length; col++)
@@ -26,6 +28,11 @@ public class TicTacToeBoard implements BlankInARow
 
     }
 
+    public int[][] getBoard()
+    {
+        return tictactoe;
+    }
+    
     public int numInARow()
     {
         return tictactoe.length;
@@ -34,6 +41,11 @@ public class TicTacToeBoard implements BlankInARow
     public int getPlayer()
     {
         return playerCount%2 + 1;
+    }
+    
+    public int getBoardVal()
+    {
+        return boardVal;
     }
     
     public int play(int row, int col)
@@ -49,6 +61,7 @@ public class TicTacToeBoard implements BlankInARow
             tictactoe[row][col] = playNumber;
             playerCount++;
         }
+        boardVal = gameOver();
         return playNumber;
         
     }
