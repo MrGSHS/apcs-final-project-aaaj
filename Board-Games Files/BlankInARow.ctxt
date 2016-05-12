@@ -1,13 +1,9 @@
 #BlueJ class context
 comment0.params=
-comment0.target=int\ numInARow()
+comment0.target=int\ gameOver()
 comment0.text=\n\ An\ example\ of\ a\ method\ header\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ \ \ \ the\ result\ produced\ by\ sampleMethod\ \n
 comment1.params=
-comment1.target=int\ gameOver()
-comment2.params=
-comment2.target=int\ getPlayer()
-comment3.params=row\ col
-comment3.target=int\ play(int,\ int)
-comment4.params=col
-comment4.target=int\ play(int)
-numComments=5
+comment1.target=int\ getPlayer()
+comment2.params=row\ col
+comment2.target=int\ play(int,\ int)
+numComments=3
