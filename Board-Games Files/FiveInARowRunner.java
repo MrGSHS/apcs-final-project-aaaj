@@ -32,8 +32,8 @@ public class FiveInARowRunner
                 indexOfComma=str.indexOf(",");
             }
             
-            row=Integer.parseInt(str.substring(0,indexOfComma));
-            col=Integer.parseInt(str.substring(indexOfComma+1));
+            row=Integer.parseInt(str.substring(0,indexOfComma)) - 1;
+            col=Integer.parseInt(str.substring(indexOfComma+1)) - 1;
             hi.play(row,col);
             
         }
