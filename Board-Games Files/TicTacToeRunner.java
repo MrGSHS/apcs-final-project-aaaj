@@ -42,5 +42,7 @@ public class TicTacToeRunner
             System.out.println("Player " + hi.gameOver() + " wins!");
         }
         
+        TicTacToeGUI hello = new TicTacToeGUI();
+        hello.display();
     }
 }
