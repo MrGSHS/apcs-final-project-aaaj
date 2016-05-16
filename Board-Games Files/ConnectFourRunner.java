@@ -8,7 +8,7 @@
 import java.util.Scanner;
 public class ConnectFourRunner
 {
-   // instance variables - replace the example below with your own
+   
     public static void main(String[] args)
     {
         int col=0;
@@ -16,12 +16,12 @@ public class ConnectFourRunner
         Scanner sc = new Scanner(System.in);
         ConnectFourBoard hi = new ConnectFourBoard();
         
-        while(hi.gameOver()==-1)
+        while(hi.gameOver()==-1 )
         {
  
             System.out.print("Player " + hi.getPlayer() + ", please make a move: ");
             col = sc.nextInt();
-            while (col<0 || col>6)
+            while (col<0 || col>6) 
             {
                 System.out.print("Invalid move. Player " + hi.getPlayer() + ", please make a legal move: ");
                 col=sc.nextInt();
