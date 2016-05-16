@@ -13,9 +13,9 @@ public interface BlankInARow
      * @param  y    a sample parameter for a method
      * @return        the result produced by sampleMethod 
      */
-    int numInARow();
     int gameOver();
     int getPlayer();
     int play(int row, int col);
+    
     
 }

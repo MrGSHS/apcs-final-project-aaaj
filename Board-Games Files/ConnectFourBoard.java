@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ConnectFourBoard implements Board
+public class ConnectFourBoard implements BlankInARow
 {
     private int [][] connectfour;
     private boolean [][] availableMoves;
@@ -25,7 +25,8 @@ public class ConnectFourBoard implements Board
     }
     
     
-    public int play(int col)
+    
+    public int play(int row, int col)
     {
         int playNumber = playerCount%2 + 1;
         availableMoves = availableMoves();
@@ -36,11 +37,11 @@ public class ConnectFourBoard implements Board
         else
         {
             int index=0;
-            while (connectfour[index][col]==0)
+            while (index!=5 && connectfour[index][col]==0)
             {
                 index++;
             }
-            connectFour[index][col] = playNumber;
+            connectfour[index][col] = playNumber;
             playerCount++;
         }
         return playNumber;
@@ -53,19 +54,20 @@ public class ConnectFourBoard implements Board
             if (connectfour[0][i]==0)
                 availableMoves[0][i]=true;
             else
-                availablemoves[0][i]=false;
+                availableMoves[0][i]=false;
         }
         return availableMoves;
     }
     
     public int gameOver()
     {
-        for (int [] row : connectfour)
+  
+        for (int row=0; row<connectfour.length; row++)
         {
             for (int col=0; col<connectfour[0].length-4; col++)
             {
                 if (connectfour[row][col]==connectfour[row][col+1] && connectfour[row][col]==connectfour[row][col+2]
-                &&  connectfour[row][col]==connectfour[row][col+3])
+                &&  connectfour[row][col]==connectfour[row][col+3] && connectfour[row][col]!=0)
                     return connectfour[row][col];
             }
         }
@@ -74,17 +76,16 @@ public class ConnectFourBoard implements Board
             for (int row=0; row<connectfour.length-4; row++)
             {
                 if (connectfour[row][col]==connectfour[row+1][col] && connectfour[row][col]==connectfour[row+2][col]
-                &&  connectfour[row][col]==connectfour[row+3][col])
+                &&  connectfour[row][col]==connectfour[row+3][col] && connectfour[row][col]!=0)
                     return connectfour[row][col];
             }
         }
-        // check diagonals, copy and pasta from andrew
         for(int row = 0; row < connectfour.length-4; row++)
         {
             for (int col = 0; col < connectfour[0].length-4; col++)
             {
                 if(connectfour[row][col]==connectfour[row+1][col+1] && connectfour[row][col]==connectfour[row+2][col+2]
-                && connectfour[row][col]==connectfour[row+3][col+3])
+                && connectfour[row][col]==connectfour[row+3][col+3] && connectfour[row][col]!=0)
                     return connectfour[row][col];                    
             }
         }
@@ -93,7 +94,7 @@ public class ConnectFourBoard implements Board
             for (int col=0; col<connectfour[0].length-4; col++)
             {
                 if (connectfour[row][col]==connectfour[row-1][col+1] && connectfour[row][col]==connectfour[row-2][col+2]
-                &&  connectfour[row][col]==connectfour[row-3][col+3])
+                &&  connectfour[row][col]==connectfour[row-3][col+3] && connectfour[row][col]!=0)
                     return connectfour[row][col];
             }
         }
