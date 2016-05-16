@@ -14,6 +14,34 @@ package.editor.height=400
 package.editor.width=992
 package.editor.x=142
 package.editor.y=439
+<<<<<<< HEAD
+=======
+package.numDependencies=2
+package.numTargets=11
+=======
+<<<<<<< HEAD
+dependency3.from=ConnectFourRunner
+dependency3.to=ConnectFourBoard
+dependency3.type=UsesDependency
+objectbench.height=100
+objectbench.width=950
+package.editor.height=622
+package.editor.width=842
+package.editor.x=1001
+package.editor.y=312
+package.numDependencies=3
+package.numTargets=12
+=======
+dependency3.from=FiveInARowRunner
+dependency3.to=FiveInARow
+dependency3.type=UsesDependency
+objectbench.height=76
+objectbench.width=752
+package.editor.height=449
+package.editor.width=644
+package.editor.x=937
+package.editor.y=23
+>>>>>>> 1d3151f3acd9b90ed21aacd3e2192422ed974eae
 package.numDependencies=3
 package.numTargets=11
 package.showExtends=true
@@ -85,8 +113,24 @@ target3.x=410
 target3.y=180
 target4.editor.height=700
 target4.editor.width=900
+<<<<<<< HEAD
 target4.editor.x=182
 target4.editor.y=337
+=======
+<<<<<<< HEAD
+target4.editor.x=1034
+target4.editor.y=198
+=======
+<<<<<<< HEAD
+target4.editor.x=402
+target4.editor.y=185
+=======
+target4.editor.x=41
+target4.editor.y=210
+>>>>>>> 6a21c84251c0aec922d9d407db8e9310d3512a67
+>>>>>>> 3b51e53534024c130690963f2ea34f39e9367f70
+>>>>>>> 604f8edec48c59d1e5aa900de876b041f154e60f
+>>>>>>> 1d3151f3acd9b90ed21aacd3e2192422ed974eae
 target4.height=50
 target4.name=FiveInARowRunner
 target4.naviview.expanded=true
@@ -137,8 +181,19 @@ target7.x=520
 target7.y=220
 target8.editor.height=726
 target8.editor.width=900
+<<<<<<< HEAD
 target8.editor.x=987
 target8.editor.y=247
+=======
+<<<<<<< HEAD
+target8.editor.x=387
+target8.editor.y=279
+=======
+target8.editor.x=881
+target8.editor.y=311
+>>>>>>> 3b51e53534024c130690963f2ea34f39e9367f70
+>>>>>>> 604f8edec48c59d1e5aa900de876b041f154e60f
+>>>>>>> 1d3151f3acd9b90ed21aacd3e2192422ed974eae
 target8.height=50
 target8.name=TicTacToeRunner
 target8.naviview.expanded=true
