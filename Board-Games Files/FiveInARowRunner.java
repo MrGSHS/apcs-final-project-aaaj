@@ -25,7 +25,7 @@ public class FiveInARowRunner
             
             while(indexOfComma == -1 || Integer.parseInt(str.substring(0,indexOfComma))>18 ||
             Integer.parseInt(str.substring(0,indexOfComma))<0 ||
-            Integer.parseInt(str.substring(indexOfComma+1))>18 || Integer.parseInt(str.substring(indexOfComma+1))<0)
+            Integer.parseInt(str.substring(indexOfComma+1,indexOfComma+2))>18 || Integer.parseInt(str.substring(indexOfComma+1,indexOfComma+2))<0)
             {
                 System.out.print("Invalid move. Player " + hi.getPlayer() + ", please make a legal move: ");
                 str=sc.nextLine();
