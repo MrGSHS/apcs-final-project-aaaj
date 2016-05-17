@@ -27,6 +27,7 @@ public class TicTacToeGUI extends JPanel
     private void initialize()
     {
         frame = new JFrame();
+        
     }
     
     
