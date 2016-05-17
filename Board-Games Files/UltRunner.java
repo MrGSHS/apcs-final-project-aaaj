@@ -34,16 +34,16 @@ public class UltRunner
             
             System.out.print("Player " + hi.getPlayer() + ", please choose a square: ");
             str2 = sc.nextLine();
-            indexOfComma=str.indexOf(",");
-            while(indexOfComma==-1 || (Integer.parseInt(str.substring(0,indexOfComma))>2 || Integer.parseInt(str.substring(0,indexOfComma))<0)
-            || (Integer.parseInt(str.substring(indexOfComma+1))>2 || Integer.parseInt(str.substring(indexOfComma+1))<0))
+            indexOfComma=str2.indexOf(",");
+            while(indexOfComma==-1 || (Integer.parseInt(str2.substring(0,indexOfComma))>2 || Integer.parseInt(str2.substring(0,indexOfComma))<0)
+            || (Integer.parseInt(str2.substring(indexOfComma+1))>2 || Integer.parseInt(str2.substring(indexOfComma+1))<0))
             {
                 System.out.print("Invalid move. Player " + hi.getPlayer() + ", please make a legal move: ");
-                str=sc.nextLine();
-                indexOfComma=str.indexOf(",");
+                str2=sc.nextLine();
+                indexOfComma=str2.indexOf(",");
             }
-            row2=Integer.parseInt(str.substring(0,indexOfComma));
-            col2=Integer.parseInt(str.substring(indexOfComma+1));
+            row2=Integer.parseInt(str2.substring(0,indexOfComma));
+            col2=Integer.parseInt(str2.substring(indexOfComma+1));
             
             
             hi.play(row,col,row2,col2);
