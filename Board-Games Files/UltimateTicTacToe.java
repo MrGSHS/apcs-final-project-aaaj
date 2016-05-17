@@ -44,7 +44,7 @@ public class UltimateTicTacToe extends TicTacToeBoard
                 return -1;
             }
             else{
-                ((ult[rowUlt][colUlt]).getBoard())[row][col] = playNumber%2;
+                (ult[rowUlt][colUlt]).play(row,col, ((playNumber-1) % 2) + 1);
                 playNumber++;
             }
         }
