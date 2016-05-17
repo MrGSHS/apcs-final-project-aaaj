@@ -61,28 +61,30 @@ public class ConnectFourBoard implements BlankInARow
     
     public int gameOver()
     {
-  
+        //rows
         for (int row=0; row<connectfour.length; row++)
         {
-            for (int col=0; col<connectfour[0].length-4; col++)
+            for (int col=0; col<connectfour[0].length-3; col++)
             {
                 if (connectfour[row][col]==connectfour[row][col+1] && connectfour[row][col]==connectfour[row][col+2]
                 &&  connectfour[row][col]==connectfour[row][col+3] && connectfour[row][col]!=0)
                     return connectfour[row][col];
             }
         }
+        //columns
         for (int col=0; col<connectfour[0].length; col++)
         {
-            for (int row=0; row<connectfour.length-4; row++)
+            for (int row=0; row<connectfour.length-3; row++)
             {
                 if (connectfour[row][col]==connectfour[row+1][col] && connectfour[row][col]==connectfour[row+2][col]
                 &&  connectfour[row][col]==connectfour[row+3][col] && connectfour[row][col]!=0)
                     return connectfour[row][col];
             }
         }
+        //diagonals
         for(int row = 0; row < connectfour.length-4; row++)
         {
-            for (int col = 0; col < connectfour[0].length-4; col++)
+            for (int col = 0; col < connectfour[0].length-3; col++)
             {
                 if(connectfour[row][col]==connectfour[row+1][col+1] && connectfour[row][col]==connectfour[row+2][col+2]
                 && connectfour[row][col]==connectfour[row+3][col+3] && connectfour[row][col]!=0)
@@ -91,7 +93,7 @@ public class ConnectFourBoard implements BlankInARow
         }
         for (int row=connectfour.length-1; row>2; row--)
         {
-            for (int col=0; col<connectfour[0].length-4; col++)
+            for (int col=0; col<connectfour[0].length-3; col++)
             {
                 if (connectfour[row][col]==connectfour[row-1][col+1] && connectfour[row][col]==connectfour[row-2][col+2]
                 &&  connectfour[row][col]==connectfour[row-3][col+3] && connectfour[row][col]!=0)
