@@ -9,7 +9,7 @@ public class ConnectFourBoard implements BlankInARow
 {
     private int [][] connectfour;
     private boolean [][] availableMoves;
-    private int playerCount;
+    private int playerCount=0;
     /**
      * Constructor for objects of class ConnectFourBoard
      */
@@ -36,12 +36,12 @@ public class ConnectFourBoard implements BlankInARow
         }
         else
         {
-            int index=0;
-            while (index!=5 && connectfour[index][col]==0)
+            int index=5;
+            while (index>=0 && connectfour[index][col]==0)
             {
-                index++;
+                index--;
             }
-            connectfour[index][col] = playNumber;
+            connectfour[index+1][col] = playNumber;
             playerCount++;
         }
         return playNumber;
@@ -49,13 +49,15 @@ public class ConnectFourBoard implements BlankInARow
     
     public boolean[][] availableMoves()
     {
+        for(int row = 0; row < connectfour.length; row++){
         for (int i=0; i<availableMoves[0].length; i++)
         {
-            if (connectfour[0][i]==0)
+            if (connectfour[row][i]==0)
                 availableMoves[0][i]=true;
             else
                 availableMoves[0][i]=false;
         }
+    }
         return availableMoves;
     }
     
