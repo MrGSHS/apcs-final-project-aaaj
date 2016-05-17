@@ -36,12 +36,12 @@ public class ConnectFourBoard implements BlankInARow
         }
         else
         {
-            int index=0;
-            while (index!=5 && connectfour[index][col]==0)
+            int index=5;
+            while (index>=0 && connectfour[index][col]==0)
             {
-                index++;
+                index--;
             }
-            connectfour[index-1][col] = playNumber;
+            connectfour[index+1][col] = playNumber;
             playerCount++;
         }
         return playNumber;
