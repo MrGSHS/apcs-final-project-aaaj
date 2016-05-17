@@ -5,29 +5,33 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.*;
 public class ConnectFourGUI
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class ConnectFourGUI
-     */
+    private int width;
+    private int height;
+    
+    private boolean over;
+    
+    private ConnectFourBoard stuff;
+    public static void main (String [] args)
+    {
+        
+    }
+    
     public ConnectFourGUI()
     {
-        // initialise instance variables
-        x = 0;
+        width=7;
+        height=6;
+        over=false;
+        initialize();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void initialize()
     {
-        // put your code here
-        return x + y;
+        
     }
 }
