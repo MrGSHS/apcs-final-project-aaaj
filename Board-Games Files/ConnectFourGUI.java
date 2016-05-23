@@ -54,6 +54,22 @@ public class ConnectFourGUI extends MouseAdapter implements ActionListener
             
         }
         
-        frmConnectfour.add(BorderLayout.CENTER);
+        //reset button
+        reset=new JButton("Reset");
+        reset.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                restart();
+            }
+        })        
+        reset.setFocusPainted(false);
+        frmConnectfour.add(reset, BorderLayout.NORTH);
+        
+        //menu stuffs
+        JmenuBar menuBar=new JMenuBar();
+        frmConnectfour.setJMenuBar(menuBar);
+        
+        JMenu mnNew
     }
 }
