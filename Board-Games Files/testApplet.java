@@ -16,6 +16,7 @@ public class testApplet extends Applet implements MouseListener
     TicTacToeBoard board;
     int rect1xco,rect1yco,rect1width,rect1height;
     
+    
     public void init()
     {
         rect1xco = 20; 
