@@ -24,10 +24,45 @@ public class FiveInARowGUI extends Applet implements MouseListener
     
     public void paint(Graphics g)
     {
+        g.setColor(new Color(193,154,107));
+        g.fillRect(0,0,800,800);
+        
         g.setColor(Color.black);
         for(int i = 1; i<=19; i++)
         {
-            
+            g.drawLine(40*i,40,40*i,760);
+            g.drawLine(40,40*i,760,40*i);
+        }
+        
+        if(board.gameOver() == -1)
+        {
+            for(int row = 0; row < 19 ; row ++)
+            {
+                for (int col = 0; col < 19; col++)
+                {
+                    if (board.getBoard()[row][col] == 1)
+                    {
+                        g.setColor(Color.black);
+                        g.fillOval((row+1)*40-14,(col+1)*40-14,28,28);
+                    }
+                    else if(board.getBoard()[row][col]==2)
+                    {
+                        g.setColor(Color.white);
+                        g.fillOval((row+1)*40-14,(col+1)*40-14,28,28);
+                    }
+
+                }
+
+            }
+        }
+        
+        if(board.gameOver() == 0)
+        {
+            g.drawString("It's a tie!",370,390);
+        }
+        if(board.gameOver()==1 || board.gameOver()==2)
+        {
+            g.drawString("Player " + board.gameOver() + " wins!", 365,390);
         }
     }
   
@@ -36,8 +71,8 @@ public class FiveInARowGUI extends Applet implements MouseListener
         xpos = me.getX(); 
         ypos = me.getY();
 
-        int row = xpos/200;
-        int col = ypos/200;
+        int row = (xpos-20)/40;
+        int col = (ypos-20)/40;
 
         if(board.availableMoves()[row][col])
         {
