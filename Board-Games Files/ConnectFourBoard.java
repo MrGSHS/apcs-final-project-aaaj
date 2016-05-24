@@ -83,7 +83,7 @@ public class ConnectFourBoard implements BlankInARow
                     return connectfour[row][col];
             }
         }
-        //diagonals
+
         for(int row = 0; row < connectfour.length-4; row++)
         {
             for (int col = 0; col < connectfour[0].length-3; col++)
