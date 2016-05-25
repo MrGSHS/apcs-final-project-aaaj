@@ -24,7 +24,10 @@ public class ConnectFourBoard implements BlankInARow
         return playerCount%2+1;
     }
     
-    
+    public int[][] getBoard()
+    {
+        return connectfour;
+    }
     
     public int play(int row, int col)
     {
