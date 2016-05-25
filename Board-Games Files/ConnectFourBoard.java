@@ -9,7 +9,7 @@ public class ConnectFourBoard implements BlankInARow
 {
     private int [][] connectfour;
     private boolean [][] availableMoves;
-    private int playerCount;
+    private int playerCount=0;
     /**
      * Constructor for objects of class ConnectFourBoard
      */
@@ -24,7 +24,10 @@ public class ConnectFourBoard implements BlankInARow
         return playerCount%2+1;
     }
     
-    
+    public int[][] getBoard()
+    {
+        return connectfour;
+    }
     
     public int play(int row, int col)
     {
@@ -36,12 +39,12 @@ public class ConnectFourBoard implements BlankInARow
         }
         else
         {
-            int index=0;
-            while (index!=5 && connectfour[index][col]==0)
+            int index=5;
+            while (index>=0 && connectfour[index][col]==0)
             {
-                index++;
+                index--;
             }
-            connectfour[index][col] = playNumber;
+            connectfour[index+1][col] = playNumber;
             playerCount++;
         }
         return playNumber;
@@ -49,13 +52,15 @@ public class ConnectFourBoard implements BlankInARow
     
     public boolean[][] availableMoves()
     {
+        for(int row = 0; row < connectfour.length; row++){
         for (int i=0; i<availableMoves[0].length; i++)
         {
-            if (connectfour[0][i]==0)
+            if (connectfour[row][i]==0)
                 availableMoves[0][i]=true;
             else
                 availableMoves[0][i]=false;
         }
+    }
         return availableMoves;
     }
     
@@ -81,10 +86,10 @@ public class ConnectFourBoard implements BlankInARow
                     return connectfour[row][col];
             }
         }
-        //diagonals
+
         for(int row = 0; row < connectfour.length-4; row++)
         {
-            for (int col = 0; col < connectfour[0].length-4; col++)
+            for (int col = 0; col < connectfour[0].length-3; col++)
             {
                 if(connectfour[row][col]==connectfour[row+1][col+1] && connectfour[row][col]==connectfour[row+2][col+2]
                 && connectfour[row][col]==connectfour[row+3][col+3] && connectfour[row][col]!=0)
@@ -93,7 +98,7 @@ public class ConnectFourBoard implements BlankInARow
         }
         for (int row=connectfour.length-1; row>2; row--)
         {
-            for (int col=0; col<connectfour[0].length-4; col++)
+            for (int col=0; col<connectfour[0].length-3; col++)
             {
                 if (connectfour[row][col]==connectfour[row-1][col+1] && connectfour[row][col]==connectfour[row-2][col+2]
                 &&  connectfour[row][col]==connectfour[row-3][col+3] && connectfour[row][col]!=0)

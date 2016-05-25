@@ -11,6 +11,7 @@ public class TicTacToeBoard implements BlankInARow
     private boolean[][] availableMoves;
     private static int playerCount;
     private int boardVal;
+    
 
     public TicTacToeBoard()
     {
@@ -27,6 +28,8 @@ public class TicTacToeBoard implements BlankInARow
         }
     }
 
+    
+    
     public int[][] getBoard()
     {
         return tictactoe;

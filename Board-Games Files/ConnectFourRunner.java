@@ -21,7 +21,7 @@ public class ConnectFourRunner
  
             System.out.print("Player " + hi.getPlayer() + ", please make a move: ");
             col = sc.nextInt();
-            while (col<0 || col>6) 
+            while ((col<0 || col>6)) 
             {
                 System.out.print("Invalid move. Player " + hi.getPlayer() + ", please make a legal move: ");
                 col=sc.nextInt();

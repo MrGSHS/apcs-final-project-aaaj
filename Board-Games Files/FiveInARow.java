@@ -26,6 +26,11 @@ public class FiveInARow implements BlankInARow
         
     }
     
+    public int[][] getBoard()
+    {
+        return fiveInARow;
+    }
+    
     public int numInARow()
     {
         return 5;
