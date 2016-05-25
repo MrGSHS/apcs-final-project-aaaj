@@ -34,6 +34,17 @@ public class FiveInARowGUI extends Applet implements MouseListener
             g.drawLine(40,40*i,760,40*i);
         }
         
+        
+        g.fillOval(155,155,10,10);
+        g.fillOval(395,155,10,10);
+        g.fillOval(635,155,10,10);
+        g.fillOval(155,395,10,10);
+        g.fillOval(395,395,10,10);
+        g.fillOval(635,395,10,10);
+        g.fillOval(155,635,10,10);
+        g.fillOval(395,635,10,10);
+        g.fillOval(635,635,10,10);
+        
         if(board.gameOver() == -1)
         {
             for(int row = 0; row < 19 ; row ++)
@@ -43,12 +54,12 @@ public class FiveInARowGUI extends Applet implements MouseListener
                     if (board.getBoard()[row][col] == 1)
                     {
                         g.setColor(Color.black);
-                        g.fillOval((row+1)*40-14,(col+1)*40-14,28,28);
+                        g.fillOval((row+1)*40-15,(col+1)*40-15,30,30);
                     }
                     else if(board.getBoard()[row][col]==2)
                     {
                         g.setColor(Color.white);
-                        g.fillOval((row+1)*40-14,(col+1)*40-14,28,28);
+                        g.fillOval((row+1)*40-15,(col+1)*40-15,30,30);
                     }
 
                 }
