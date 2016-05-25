@@ -27,6 +27,10 @@ public class UltimateTicTacToe extends TicTacToeBoard
         playNumber = 1;
     }
     
+    public TicTacToeBoard [][] getUltBoard(){
+        return ult;
+    }
+    
     public int getPlayer()
     {
         return (playNumber-1)%2+1;
