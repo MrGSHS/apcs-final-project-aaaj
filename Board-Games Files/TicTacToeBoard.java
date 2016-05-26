@@ -2,8 +2,8 @@
 /**
  * Write a description of class TicTacToeBoard here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Andrew and Alex
+ * @1.0
  */
 public class TicTacToeBoard implements BlankInARow
 {
@@ -12,20 +12,14 @@ public class TicTacToeBoard implements BlankInARow
     private static int playerCount;
     private int boardVal;
     
-
+    //creates the board
     public TicTacToeBoard()
     {
         tictactoe = new int[3][3];
         availableMoves = new boolean [3][3];
         playerCount = 0;
         boardVal = -1;
-        for (int row = 0; row < tictactoe.length; row++)
-        {
-            for (int col = 0; col < tictactoe[0].length; col++)
-            {
-                tictactoe[row][col] = 0;
-            }
-        }
+        
     }
 
     
@@ -34,22 +28,17 @@ public class TicTacToeBoard implements BlankInARow
     {
         return tictactoe;
     }
-    
-    public int numInARow()
-    {
-        return tictactoe.length;
-    }
-
+    //returns the player
     public int getPlayer()
     {
         return playerCount%2 + 1;
     }
-    
+    //used for ultimate tic tac toe
     public int getBoardVal()
     {
         return boardVal;
     }
-    
+    //makes the move, returns -1 if the square is already filled
     public int play(int row, int col)
     {
         int playNumber = playerCount%2 + 1;
@@ -66,7 +55,7 @@ public class TicTacToeBoard implements BlankInARow
         boardVal = gameOver();
         return playNumber;
     }
-    
+    //alternate play method for ultimate tic tac toe
     public int play(int row, int col, int input)
     {
         availableMoves = availableMoves();
@@ -83,7 +72,7 @@ public class TicTacToeBoard implements BlankInARow
         boardVal = gameOver();
         return -1000;
     }
-    
+    //returns the available moves
     public boolean[][] availableMoves()
     {
         for(int row=0; row<availableMoves.length; row++)
@@ -98,13 +87,11 @@ public class TicTacToeBoard implements BlankInARow
         }
         return availableMoves;
     }
-
+    //checks if there is a 3 in a row, returns the value of the winner. Otherwise, returns 0 if 
+    //the game is a tie, and -1 if moves are still available.
     public int gameOver()
     {
         boolean a = true;
-        
-        
-        
         
         for (int[] row : tictactoe)
         {
