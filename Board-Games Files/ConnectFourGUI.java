@@ -1,20 +1,23 @@
-import java.applet.*;
-import java.awt.*;
-import java.awt.event.*;
+
 /**
- * Write a description of class testApplet here.
+ * Write a description of class ConnectFourGUI here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TicTacToeGUI extends Applet implements MouseListener
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.*;
+public class ConnectFourGUI extends Applet implements MouseListener
 {
     int xpos;
     int ypos;
     boolean mouseEntered;
     boolean[][] squares;
     boolean rect1Clicked;
-    TicTacToeBoard board = new TicTacToeBoard();
+    ConnectFourBoard board = new ConnectFourBoard();
 
     public void init()
     {
@@ -24,29 +27,33 @@ public class TicTacToeGUI extends Applet implements MouseListener
     public void paint(Graphics g)
     {
         
-
         g.setColor(Color.black);
-        g.drawLine(0,200,600,200);
-        g.drawLine(0,400,600,400);
-        g.drawLine(200,0,200,600);
-        g.drawLine(400,0,400,600);
+        for (int i=0; i<=600; i+=100)
+        {
+            g.drawLine(0,i,700,i);
+        }
+        for (int i=0; i<=700; i+=100)
+        {
+            g.drawLine(i,0,i,600);
+        }
 
         if(board.gameOver() == -1)
         {
-            for(int row = 0; row < 3; row ++)
+            for(int row = 0; row < 6; row ++)
             {
-                for (int col = 0; col < 3; col++)
+                for (int col = 0; col < 7; col++)
                 {
                     if (board.getBoard()[row][col] == 1)
                     {
-                        g.drawLine(25+row*200,25+col*200,175 + row*200, 175 + col*200);
-                        g.drawLine(25+row*200, 175+col*200, 175+ row*200, 25+col*200);
+                        g.setColor(Color.black);
+                        g.fillOval((col)*100,(5-row)*100,100,100);
                     }
                     else if(board.getBoard()[row][col]==2)
                     {
-                        g.drawOval(25+row*200,25+col*200,150,150);
+                        g.setColor(Color.red);
+                        g.fillOval((col)*100,(5-row)*100,100,100);
                     }
-
+                    
                 }
 
             }
@@ -54,26 +61,24 @@ public class TicTacToeGUI extends Applet implements MouseListener
 
         if(board.gameOver() == 0)
         {
-            g.drawString("It's a tie!",270,290);
+            g.drawString("It's a tie!",305,345);
         }
         if(board.gameOver()==1 || board.gameOver()==2)
         {
-            g.drawString("Player " + board.gameOver() + " wins!", 265,290);
+            g.drawString("Player " + board.gameOver() + " wins!", 307,350);
         }
 
     }
 
     public void mouseClicked (MouseEvent me) 
     {
-        xpos = me.getX(); 
-        ypos = me.getY();
+        xpos = me.getX();
 
-        int row = xpos/200;
-        int col = ypos/200;
+        int col = xpos/100;
 
-        if(board.availableMoves()[row][col])
+        if(board.availableMoves()[0][col])
         {
-            board.play(row,col);
+            board.play(0,col);
             repaint();
         }
         else
