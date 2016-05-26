@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class ConnectFourRunner here.
+ * Blind Connect 4 played with coordinates.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Albert
+
  */
 import java.util.Scanner;
 public class ConnectFourRunner
