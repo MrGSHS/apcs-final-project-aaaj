@@ -11,11 +11,11 @@ dependency2.type=UsesDependency
 dependency3.from=FiveInARowRunner
 dependency3.to=FiveInARow
 dependency3.type=UsesDependency
-dependency4.from=ConnectFourRunner
-dependency4.to=ConnectFourBoard
+dependency4.from=TicTacToeRunner
+dependency4.to=TicTacToeGUI
 dependency4.type=UsesDependency
-dependency5.from=UltRunner
-dependency5.to=UltimateTicTacToe
+dependency5.from=TicTacToeGUI
+dependency5.to=TicTacToeBoard
 dependency5.type=UsesDependency
 dependency6.from=ConnectFourRunner
 dependency6.to=ConnectFourBoard
@@ -33,17 +33,10 @@ objectbench.height=76
 objectbench.width=752
 package.editor.height=449
 package.editor.width=644
-<<<<<<< HEAD
-package.editor.x=892
-package.editor.y=43
-package.numDependencies=5
-package.numTargets=10
-=======
 package.editor.x=969
 package.editor.y=140
 package.numDependencies=10
 package.numTargets=13
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -51,25 +44,6 @@ target1.appletHeight=800
 target1.appletWidth=800
 target1.editor.height=700
 target1.editor.width=900
-<<<<<<< HEAD
-target1.editor.x=963
-target1.editor.y=399
-target1.height=50
-target1.name=ConnectFourRunner
-target1.naviview.expanded=true
-target1.showInterface=false
-target1.type=ClassTarget
-target1.typeParameters=
-target1.width=110
-target1.x=330
-target1.y=370
-target10.editor.height=700
-target10.editor.width=900
-target10.editor.x=56
-target10.editor.y=111
-target10.height=50
-target10.name=ConnectFourBoard
-=======
 target1.editor.x=995
 target1.editor.y=278
 target1.height=50
@@ -88,22 +62,10 @@ target10.editor.x=164
 target10.editor.y=143
 target10.height=50
 target10.name=TicTacToeBoard
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target10.naviview.expanded=true
 target10.showInterface=false
 target10.type=ClassTarget
 target10.typeParameters=
-<<<<<<< HEAD
-target10.width=130
-target10.x=100
-target10.y=230
-target2.editor.height=700
-target2.editor.width=1234
-target2.editor.x=643
-target2.editor.y=43
-target2.height=50
-target2.name=UltRunner
-=======
 target10.width=120
 target10.x=60
 target10.y=310
@@ -153,22 +115,10 @@ target2.editor.x=336
 target2.editor.y=198
 target2.height=50
 target2.name=FiveInARowRunner
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target2.naviview.expanded=true
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
-<<<<<<< HEAD
-target2.width=90
-target2.x=150
-target2.y=10
-target3.editor.height=700
-target3.editor.width=900
-target3.editor.x=961
-target3.editor.y=235
-target3.height=50
-target3.name=Board
-=======
 target2.width=140
 target2.x=470
 target2.y=290
@@ -180,23 +130,9 @@ target3.editor.x=84
 target3.editor.y=205
 target3.height=50
 target3.name=testApplet
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target3.naviview.expanded=true
 target3.numberAppletParameters=0
 target3.showInterface=false
-<<<<<<< HEAD
-target3.type=InterfaceTarget
-target3.typeParameters=
-target3.width=80
-target3.x=50
-target3.y=110
-target4.editor.height=700
-target4.editor.width=900
-target4.editor.x=182
-target4.editor.y=337
-target4.height=50
-target4.name=FiveInARow
-=======
 target3.type=AppletTarget
 target3.typeParameters=
 target3.width=90
@@ -209,21 +145,9 @@ target4.editor.y=199
 target4.height=50
 target4.name=BlankInARow
 target4.naviview.expanded=true
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target4.showInterface=false
 target4.type=InterfaceTarget
 target4.typeParameters=
-<<<<<<< HEAD
-target4.width=100
-target4.x=410
-target4.y=180
-target5.editor.height=700
-target5.editor.width=900
-target5.editor.x=41
-target5.editor.y=210
-target5.height=50
-target5.name=FiveInARowRunner
-=======
 target4.width=110
 target4.x=260
 target4.y=220
@@ -233,22 +157,10 @@ target5.editor.x=159
 target5.editor.y=270
 target5.height=50
 target5.name=TicTacToeRunner
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target5.naviview.expanded=true
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
-<<<<<<< HEAD
-target5.width=140
-target5.x=160
-target5.y=360
-target6.editor.height=700
-target6.editor.width=900
-target6.editor.x=1020
-target6.editor.y=188
-target6.height=50
-target6.name=TicTacToeBoard
-=======
 target5.width=130
 target5.x=30
 target5.y=370
@@ -258,77 +170,26 @@ target6.editor.x=977
 target6.editor.y=43
 target6.height=50
 target6.name=UltimateTicTacToe
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target6.naviview.expanded=true
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
-<<<<<<< HEAD
-target6.width=120
-target6.x=30
-target6.y=310
-target7.editor.height=700
-target7.editor.width=900
-target7.editor.x=0
-target7.editor.y=23
-target7.height=50
-target7.name=BlankInARow
-target7.naviview.expanded=true
-=======
 target6.width=140
 target6.x=430
 target6.y=10
 target7.height=50
 target7.name=ConnectFourRunner
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
 target7.showInterface=false
-target7.type=InterfaceTarget
+target7.type=ClassTarget
 target7.typeParameters=
-<<<<<<< HEAD
-target7.width=110
-target7.x=410
-target7.y=80
-target8.editor.height=726
-target8.editor.width=900
-target8.editor.x=182
-target8.editor.y=311
-target8.height=50
-target8.name=TicTacToeRunner
-=======
 target7.width=150
 target7.x=190
 target7.y=10
 target8.height=50
 target8.name=UltRunner
-<<<<<<< HEAD
-=======
-=======
-target7.x=150
-target7.y=10
-target8.editor.height=876
-target8.editor.width=1422
-target8.editor.x=498
-target8.editor.y=52
-target8.height=50
-target8.name=UltRunner
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
-target8.naviview.expanded=true
->>>>>>> bb5e7812e80d4ac61cfc45a466e541f39883075c
->>>>>>> 7107a17311bf3b3f2efce0fce7f0d19b733f835e
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
-<<<<<<< HEAD
-target8.width=130
-target8.x=410
-target8.y=280
-target9.editor.height=700
-target9.editor.width=900
-target9.editor.x=0
-target9.editor.y=23
-target9.height=50
-target9.name=UltimateTicTacToe
-=======
 target8.width=90
 target8.x=490
 target8.y=70
@@ -338,38 +199,10 @@ target9.editor.x=38
 target9.editor.y=48
 target9.height=50
 target9.name=FiveInARow
-<<<<<<< HEAD
-=======
-=======
-target9.editor.x=1018
-target9.editor.y=145
-target9.height=50
-target9.name=Board
->>>>>>> bb5e7812e80d4ac61cfc45a466e541f39883075c
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
->>>>>>> 7107a17311bf3b3f2efce0fce7f0d19b733f835e
 target9.naviview.expanded=true
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
-<<<<<<< HEAD
 target9.width=100
 target9.x=510
 target9.y=360
-=======
-<<<<<<< HEAD
-target9.width=140
-target9.x=250
-target9.y=10
-=======
-<<<<<<< HEAD
-target9.width=100
-target9.x=510
-target9.y=360
-=======
-target9.width=80
-target9.x=50
-target9.y=110
->>>>>>> bb5e7812e80d4ac61cfc45a466e541f39883075c
->>>>>>> 8b3ca6bc22ea30e1569f0e10da87c8ddcd76e1e0
->>>>>>> 7107a17311bf3b3f2efce0fce7f0d19b733f835e
