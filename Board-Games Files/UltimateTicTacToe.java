@@ -2,8 +2,7 @@
 /**
  * Write a description of class UltimateTicTacToe here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Josh
  */
 public class UltimateTicTacToe extends TicTacToeBoard
 {
@@ -35,7 +34,7 @@ public class UltimateTicTacToe extends TicTacToeBoard
     {
         return (playNumber-1)%2+1;
     }
-    
+    //plays the move, returns -1 if the move is full.
     public int play(int rowUlt, int colUlt, int row, int col){
         availableMoves = availableMoves();
         if(availableMoves[rowUlt][colUlt]==false)

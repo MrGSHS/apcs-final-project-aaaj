@@ -1,8 +1,7 @@
 /**
  * Write a description of class FiveInARow here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Andrew
  */
 public class FiveInARow implements BlankInARow
 {
@@ -25,7 +24,7 @@ public class FiveInARow implements BlankInARow
         }
         
     }
-    
+    //returns the board with the moves
     public int[][] getBoard()
     {
         return fiveInARow;
@@ -35,17 +34,17 @@ public class FiveInARow implements BlankInARow
     {
         return 5;
     }
-    
+    //returns the player #
     public int getPlayer()
     {
         return playerCount%2 + 1;
     }
-    
+    //returns which player wins
     public int getWinner()
     {
         return (playerCount - 1) % 2 + 1;
     }
-
+    //makes the move, returns -1 if the move is already played on
     public int play(int row, int col)
     {
         int playNumber = playerCount % 2 + 1;
@@ -62,7 +61,7 @@ public class FiveInARow implements BlankInARow
         
         return playNumber;
     }
-    
+    //returns the unplayed squares
     public boolean[][] availableMoves()
     {
         for(int row=0; row<availableMoves.length; row++)
@@ -77,7 +76,8 @@ public class FiveInARow implements BlankInARow
         }
         return availableMoves;
     }
-    
+    //checks for a winner, returns the winner if they have 5 in a row, otherwise, return -1 
+    //if moves are still available, and 0 if it's a tie.
     public int gameOver()
     {
         // checking for a win horizontally

@@ -1,9 +1,8 @@
 import java.util.*;
 /**
- * Write a description of class FiveInARowRunner here.
+ * Five in a row only using your mind. Played using coordinates.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Andrew
  */
 public class FiveInARowRunner
 {

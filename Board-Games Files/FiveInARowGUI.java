@@ -2,10 +2,9 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 /**
- * Write a description of class FiveInARowGUI here.
+ * Similar to TicTacToe and ConnectFourGui method uses
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Andrew and Josh
  */
 public class FiveInARowGUI extends Applet implements MouseListener
 {

@@ -2,10 +2,10 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 /**
- * Write a description of class testApplet here.
+ * GUI form of Tic Tac Toe, played with mouse clicks.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Andrew and Alex
+ * @1.0
  */
 public class TicTacToeGUI extends Applet implements MouseListener
 {
@@ -20,7 +20,7 @@ public class TicTacToeGUI extends Applet implements MouseListener
     {
         addMouseListener(this);
     }
-
+    //draws the board, and redraws it each time as a move is made.
     public void paint(Graphics g)
     {
         
@@ -62,7 +62,8 @@ public class TicTacToeGUI extends Applet implements MouseListener
         }
 
     }
-
+    //gets the x and y coordinate of where the mouse clicked, and divides by 200 to bring it down to 
+    //0,1, or 2.
     public void mouseClicked (MouseEvent me) 
     {
         xpos = me.getX(); 
