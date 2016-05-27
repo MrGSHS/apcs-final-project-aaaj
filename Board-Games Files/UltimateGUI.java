@@ -77,6 +77,24 @@ public class UltimateGUI extends Applet implements MouseListener
                 }
 
             }
+            
+            
+            
+            for(int row = 0; row < 3; row++){
+                for(int col = 0; col < 3; col++){
+                     
+                            if(board.getUltBoard()[row][col].getBoardVal()==1){
+                                g.drawLine(row*200, col*200, row*200+200, col*200+200);
+                                g.drawLine(row*200+200, col*200, row*200, col*200+200);
+                            }
+                            else if (board.getUltBoard()[row][col].getBoardVal()==2){
+                                g.drawOval(row*200, col*200,200,200);
+                            }
+                            
+                        
+                    
+                }
+            }
         }
 
         if(board.gameOver() == 0)
@@ -105,31 +123,35 @@ public class UltimateGUI extends Applet implements MouseListener
         
         
         
-        if(board.getUltBoard()[row][col].getBoard()[row2][col2] != 1 && board.getUltBoard()[row][col].getBoard()[row2][col2] != 2 && board.getUltBoard()[row][col].gameOver()==-1)
-        {
-            board.play(row,col,row2,col2);
-            repaint();
-        }
-        else
-        {
+            if(board.getUltBoard()[row][col].getBoard()[row2][col2] != 1 && board.getUltBoard()[row][col].getBoard()[row2][col2] != 2 && board.getUltBoard()[row][col].gameOver()==-1)
+            {
+                board.play(row,col,row2,col2);
+                repaint();
+                prevRow = row2;
+                prevCol = col2;
+            }
+            else
+            {
 
+            }
         }
-        }
-        
         else if (board.getUltBoard()[prevRow][prevCol].gameOver() == -1){
             if(row == prevRow && col == prevCol){
                 board.play(row,col,row2,col2);
                 repaint();
+                prevRow = row2;
+                prevCol = col2;
             }
         
         }
         else if(board.getUltBoard()[prevRow][prevCol].gameOver() != -1){
             board.play(row,col,row2,col2);
             repaint();
+            prevRow = row2;
+            prevCol = col2;
         }
         
-        prevRow = row2;
-        prevCol = col2;
+        
         
     } 
 
