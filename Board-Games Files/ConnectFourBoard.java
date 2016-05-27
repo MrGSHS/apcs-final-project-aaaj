@@ -1,9 +1,8 @@
 
 /**
- * Write a description of class ConnectFourBoard here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @aAlbert and Alex
+ * @1.0
  */
 public class ConnectFourBoard implements BlankInARow
 {
@@ -18,7 +17,7 @@ public class ConnectFourBoard implements BlankInARow
         connectfour=new int[6][7];
         availableMoves=new boolean[1][7];
     }
-    
+    //returns the player who made the move
     public int getPlayer()
     {
         return playerCount%2+1;
@@ -28,7 +27,7 @@ public class ConnectFourBoard implements BlankInARow
     {
         return connectfour;
     }
-    
+    //makes the move onto the board, returns -1 if the column is full.
     public int play(int row, int col)
     {
         int playNumber = playerCount%2 + 1;
@@ -49,7 +48,7 @@ public class ConnectFourBoard implements BlankInARow
         }
         return playNumber;
     }
-    
+    //returns a boolean of the available moves
     public boolean[][] availableMoves()
     {
         for(int row = 0; row < connectfour.length; row++){
@@ -63,7 +62,8 @@ public class ConnectFourBoard implements BlankInARow
     }
         return availableMoves;
     }
-    
+    //checks to see if someone wins, returns player # if so. Otherwise, returns -1 if moves can still be made,
+    //or 0 if the game is a tie.
     public int gameOver()
     {
         //rows

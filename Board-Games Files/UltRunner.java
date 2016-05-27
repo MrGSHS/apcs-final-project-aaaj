@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * Write a description of class UltRunner here.
  * 
- * @author (your name) 
+ * @Josh
  * @version (a version number or a date)
  */
 public class UltRunner

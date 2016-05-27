@@ -1,8 +1,8 @@
 import java.util.*;
 /**
- * Write a description of class TicTacToeRunner here.
+ * TicTacTow with coordinates
  * 
- * @author (your name) 
+ * @Alex
  * @version (a version number or a date)
  */
 public class TicTacToeRunner
@@ -21,6 +21,7 @@ public class TicTacToeRunner
             System.out.print("Player " + hi.getPlayer() + ", please make a move: ");
             str = sc.nextLine();
             indexOfComma=str.indexOf(",");
+            //checks for correctly entered coordinates
             while(indexOfComma==-1 || (Integer.parseInt(str.substring(0,indexOfComma))>3 || Integer.parseInt(str.substring(0,indexOfComma))<1)
             || (Integer.parseInt(str.substring(indexOfComma+1))>3 || Integer.parseInt(str.substring(indexOfComma+1))<1))
             {

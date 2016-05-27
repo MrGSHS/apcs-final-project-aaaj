@@ -2,7 +2,7 @@
 /**
  * Write a description of class ConnectFourGUI here.
  * 
- * @author (your name) 
+ * @Albert
  * @version (a version number or a date)
  */
 import java.applet.*;
@@ -23,7 +23,7 @@ public class ConnectFourGUI extends Applet implements MouseListener
     {
         addMouseListener(this);
     }
-
+    //draws the board, and redraws it each time as a move is made.
     public void paint(Graphics g)
     {
         
@@ -69,7 +69,7 @@ public class ConnectFourGUI extends Applet implements MouseListener
         }
 
     }
-
+    //gets the coordinates of where the move clicked.
     public void mouseClicked (MouseEvent me) 
     {
         xpos = me.getX();
@@ -87,7 +87,7 @@ public class ConnectFourGUI extends Applet implements MouseListener
         }
 
     } 
-
+    //simply needed to be implemeneted, no use for mousePressed and mouseReleased
     public void mouseEntered (MouseEvent me) 
     {
         mouseEntered = true; 
